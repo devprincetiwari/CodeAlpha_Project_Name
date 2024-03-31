@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince Tiwari - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            text-decoration: none;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ffd700;
+        }
+
+        /* Home Section */
+        .home {
+            background-color: #f4f4f4;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .home h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .home h3 {
+            font-size: 24px;
+        }
+
+        .home p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn-box {
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            background-color: #ffd700;
+            color: #333;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #fff;
+            padding: 100px 0;
+        }
+
+        .about h2 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .about-img {
+            text-align: center;
+            position: relative;
+        }
+
+        .about-img img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .circle-spin {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 4px solid #333;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Skills Section */
+        .skills {
+            background-color: #f4f4f4;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .skills h2 {
+            margin-bottom: 50px;
+        }
+
+        .skills-row {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 50px;
+        }
+
+        .skills-column {
+            flex: 1;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .skills-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress {
+            margin-bottom: 20px;
+        }
+
+        .progress h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .bar {
+            background-color: #333;
+            height: 20px;
+            border-radius: 10px;
+        }
+
+        .bar span {
+            display: block;
+            height: 100%;
+            background-color: #ffd700;
+            border-radius: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #333;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .contact h2 {
+            margin-bottom: 50px;
+        }
+
+        .input-box {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .input-field input,
+        .textarea-field textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid #ffd700;
+            background-color: transparent;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        .input-field input:focus,
+        .textarea-field textarea:focus {
+            outline: none;
+        }
+
+        .textarea-field textarea {
+            resize: none;
+        }
+
+        .btn-box {
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #ffd700;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #333;
+            color: #ffd700;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: #fff;
+        }
+
+        .footer a:hover {
+            color: #ffd700;
+        }
+
+        .footer-iconTop {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .footer-iconTop a {
+            font-size: 24px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px;
+            }
+
+            .navbar {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+            }
+
+            .navbar.active {
+                display: flex;
+            }
+
+            .navbar a {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header design -->
+    <header class="header">
+        <a href="#" class="logo">PRINCE</a>
+        <div class="bx-bx-menu" id="menu-icon"></div>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <!-- Home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, I'm <span>Prince Tiwari</span></h1>
+            <div class="text-animate">
+                <h3>Student at Jain University</h3>
+            </div>
+            <p>I am a passionate learner in the field of web development and design, currently studying at Jain University. </p>
+            <div class="btn-box">
+                <a href="#" class="btn">Hire Me</a>
+                <a href="#" class="btn">Let's Talk</a>
+            </div>
+            
+        </div>
+    </section>
+    <!-- About section design -->
+    <section class="about" id="about">
+        <h2 class="heading">About <span>Me</span></h2>
+        <div class="about-img">
+            <img src="images/prince.jpg" alt="Prince Tiwari">
+            
+        </div>
+        <div class="about-content">
+            <h3>Web Developer</h3>
+            <p>I am a Computer Science and Engineering student at Jain University. I have a keen interest in web development and design. I enjoy creating intuitive and visually appealing websites.</p>
+            <p>My goal is to continually improve my skills and contribute meaningfully to the tech industry. I am enthusiastic about learning new technologies and applying them to real-world projects.</p>
+            <div class="btn-box btns">
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section Design -->
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="skills-row">
+            <div class="skills-column">
+                <h3 class="title">Coding Skills</h3>
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>HTML <span>80%</span></h3>
+                            <div class="bar"><span style="width: 80%;"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>CSS <span>70%</span></h3>
+                            <div class="bar"><span style="width: 70%;"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>JavaScript <span>40%</span></h3>
+                            <div class="bar"><span style="width: 40%;"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Java <span>50%</span></h3>
+                            <div class="bar"><span style="width: 50%;"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skills-row">
+            <div class="skills-column">
+                <h3 class="title">Professional Skills</h3>
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>Web Design <span>40%</span></h3>
+                            <div class="bar"><span style="width: 40%;"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Web Development <span>50%</span></h3>
+                            <div class="bar"><span style="width: 50%;"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Android Development <span>60%</span></h3>
+                            <div class="bar"><span style="width: 60%;"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Digital Marketing <span>50%</span></h3>
+                            <div class="bar"><span style="width: 50%;"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Address" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number" placeholder="Mobile Number" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Subject" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+            <div class="textarea-field">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <span class="focus"></span>
+            </div>
+            <div class="btn-box btns">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </section>
+    <!-- Footer design -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>&copy; 2024 by Prince Tiwari | All Rights Reserved</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+    <!-- JavaScript -->
+    <script>
+        // JavaScript code can be placed here if needed
+    </script>
+</body>
+</html>

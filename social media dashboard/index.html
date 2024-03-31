@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-gray-100">
+  <div class="grid grid-cols-1 md:grid-cols-6 gap-4 h-screen">
+    <!-- Sidebar -->
+    <aside class="bg-gray-800 text-gray-100 col-span-1 md:col-span-1">
+      <div class="p-4 flex items-center justify-between">
+        <div class="text-2xl font-bold">
+          <span class="material-icons-outlined text-gray-300">mood</span> LOGO
+        </div>
+        <button onclick="closeSidebar()" class="md:hidden focus:outline-none focus:bg-gray-700 p-1 rounded">
+          <span class="material-icons-outlined text-gray-300">close</span>
+        </button>
+      </div>
+      <nav class="flex-1">
+        <ul class="py-4">
+          <li><a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-700 hover:text-white"><span class="material-icons-outlined mr-2">dashboard</span>Dashboard</a></li>
+          <li><a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-700 hover:text-white"><span class="material-icons-outlined mr-2">leaderboard</span>Leaderboard</a></li>
+          <li><a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-700 hover:text-white"><span class="material-icons-outlined mr-2">forum</span>Forum</a></li>
+          <li><a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-700 hover:text-white"><span class="material-icons-outlined mr-2">phone</span>Support</a></li>
+          <li><a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-700 hover:text-white"><span class="material-icons-outlined mr-2">email</span>Messages</a></li>
+          <li><a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-700 hover:text-white"><span class="material-icons-outlined mr-2">poll</span>Reports</a></li>
+          <li><a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-700 hover:text-white"><span class="material-icons-outlined mr-2">settings</span>Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- End Sidebar -->
+    <!-- Main Content -->
+    <main class="bg-gray-200 col-span-5 md:col-span-5 p-6 overflow-y-auto">
+      <div class="flex items-center justify-between mb-6">
+        <h1 class="text-2xl font-bold">DASHBOARD</h1>
+        <div class="hidden md:flex space-x-4">
+          <button class="focus:outline-none">
+            <span class="material-icons-outlined text-gray-600">search</span>
+          </button>
+          <button class="focus:outline-none">
+            <span class="material-icons-outlined text-gray-600">notifications</span>
+          </button>
+          <button class="focus:outline-none">
+            <span class="material-icons-outlined text-gray-600">email</span>
+          </button>
+          <button class="focus:outline-none">
+            <span class="material-icons-outlined text-gray-600">account_circle</span>
+          </button>
+        </div>
+        <button onclick="openSidebar()" class="md:hidden focus:outline-none">
+          <span class="material-icons-outlined text-gray-600">menu</span>
+        </button>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-white rounded-lg shadow p-6 flex items-center justify-between">
+          <div>
+            <h2 class="text-lg font-semibold">LIKES</h2>
+            <span class="material-icons-outlined text-gray-500 text-4xl"></span>
+          </div>
+          <h1 class="text-3xl font-bold">4,021</h1>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6 flex items-center justify-between">
+          <div>
+            <h2 class="text-lg font-semibold">SUBSCRIBERS</h2>
+            <span class="material-icons-outlined text-gray-500 text-4xl"></span>
+          </div>
+          <h1 class="text-3xl font-bold">8,731</h1>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6 flex items-center justify-between">
+          <div>
+            <h2 class="text-lg font-semibold">FOLLOWERS</h2>
+            <span class="material-icons-outlined text-gray-500 text-4xl"></span>
+          </div>
+          <h1 class="text-3xl font-bold">3,841</h1>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6 flex items-center justify-between">
+          <div>
+            <h2 class="text-lg font-semibold">MESSAGES</h2>
+            <span class="material-icons-outlined text-gray-500 text-4xl"></span>
+          </div>
+          <h1 class="text-3xl font-bold">1,962</h1>
+        </div>
+      </div>
+      <div class="mt-8">
+        <div class="bg-white rounded-lg shadow p-6">
+          <h2 class="text-xl font-bold mb-4">Latest Updates</h2>
+          <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet facilisis nulla, consectetur pulvinar diam. Aliquam tempus vel quam.</p>
+          <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Add</button>
+        </div>
+        <div class="mt-6 grid grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg shadow p-6">
+            <div class="flex items-center justify-between">
+              <div class="bg-red-500 rounded-full p-3 text-white">
+                <i class="bi bi-twitter"></i>
+              </div>
+              <div>
+                <h1 class="text-xl font-bold text-red-500">+274</h1>
+                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow p-6">
+            <div class="flex items-center justify-between">
+              <div class="bg-green-500 rounded-full p-3 text-white">
+                <i class="bi bi-instagram"></i>
+              </div>
+              <div>
+                <h1 class="text-xl font-bold text-green-500">+352</h1>
+                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow p-6">
+            <div class="flex items-center justify-between">
+              <div class="bg-orange-500 rounded-full p-3 text-white">
+                <i class="bi bi-facebook"></i>
+              </div>
+              <div>
+                <h1 class="text-xl font-bold text-orange-500">-126</h1>
+                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow p-6">
+            <div class="flex items-center justify-between">
+              <div class="bg-blue-500 rounded-full p-3 text-white">
+                <i class="bi bi-linkedin"></i>
+              </div>
+              <div>
+                <h1 class="text-xl font-bold text-blue-500">+102</h1>
+                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- End Main Content -->
+  </div>
+  <!-- JavaScript -->
+  <script>
+    function openSidebar() {
+      document.querySelector('aside').classList.remove('md:hidden');
+    }
+    function closeSidebar() {
+      document.querySelector('aside').classList.add('md:hidden');
+    }
+  </script>
+</body>
+</html>
